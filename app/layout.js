@@ -1,8 +1,7 @@
 // app/layout.jsx
-import Navbar from "@/components/Navbar";
-import "../app/globals.css"
-import Footer from "@/components/Footer";
-
+import "./globals.css";
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
 
 export const metadata = {
   title: "Productify",
@@ -13,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar/>
+        <Navbar />
         <main className="min-h-screen px-6 py-4">
           {children}
         </main>
