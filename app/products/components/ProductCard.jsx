@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 // app/products/components/ProductCard.jsx
 import Link from "next/link";
-import { Star, ShoppingBag, Eye, Heart } from "lucide-react";
+import { Star,  Eye, } from "lucide-react";
 import { useState } from "react";
 
 export default function ProductCard({ product }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [isLiked, setIsLiked] = useState(false);
 
   return (
     <div 
