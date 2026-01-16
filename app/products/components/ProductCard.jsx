@@ -2,10 +2,8 @@
 // app/products/components/ProductCard.jsx
 import Link from "next/link";
 import { Star,  Eye, } from "lucide-react";
-import { useState } from "react";
 
 export default function ProductCard({ product }) {
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div 
