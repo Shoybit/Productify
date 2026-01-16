@@ -3,6 +3,7 @@ import BannerSlider from "../components/BannerSlider";
 import LatestProducts from "../components/LatestProducts";
 import { getProducts } from "../lib/api";
 import Features from "../components/Features";
+import Testimonials from "../components/Testimonials";
 
 export default async function HomePage() {
 const data = await getProducts({ limit: 4 });
@@ -15,6 +16,7 @@ const products = data.products;
       <LatestProducts products={products} />
       <HowItWorks></HowItWorks>
       <Features></Features>
+      <Testimonials></Testimonials>
     </div>
   );
 }
