@@ -7,44 +7,44 @@ import { ArrowRight, Plus, Eye, Shield, CheckCircle } from "lucide-react";
 
 const slides = [
   {
-    title: "Product Management Made Easy",
-    desc: "Streamline your product catalog with our intuitive dashboard",
+    title: "Wireless Bluetooth Headphones",
+    desc: "Experience powerful sound and total freedom with these Wireless Bluetooth Headphones. Designed for comfort and performance, they deliver clear audio, deep bass, and stable connectivity for music, calls, gaming, and workouts. The lightweight, ergonomic design ensures all-day comfort, while long-lasting battery life keeps you connected without interruptions. With easy pairing and built-in controls, you can enjoy seamless listening anytime, anywhere.",
     cta: "View Products",
     link: "/products",
     bg: "from-blue-600 to-indigo-700",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
+    image: "https://i.ibb.co.com/PsW0MPwq/hoco-esd15-wireless-bluetooth-headphones-white.jpg", 
     icon: Eye,
-    features: ["Real-time updates", "Bulk operations", "Advanced filtering"]
+    features: ["Bluetooth connectivity for fast, stable pairing", "Built-in microphone for hands-free calls", "Long battery life for extended use"]
   },
   {
-    title: "Add Products in Seconds",
-    desc: "Upload products with images, pricing, and specifications effortlessly",
+    title: "Dumbbell Set",
+    desc: "Build strength and improve fitness with this versatile Dumbbell Set, perfect for home workouts and gym training. Designed for durability and comfort, it helps you target multiple muscle groups including arms, shoulders, chest, back, and legs. The adjustable weight design allows you to customize your workout intensity, making it suitable for beginners and advanced users alike. Compact and easy to store, this dumbbell set is ideal for strength training, toning, and endurance workouts.",
     cta: "Add Product Now",
     link: "/add-product",
     bg: "from-purple-600 to-pink-600",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
+    image: "https://i.ibb.co.com/mVZvkQrZ/3761811-Adjustable20-Set20kg.avif",
     icon: Plus,
-    features: ["Drag & drop upload", "Auto categorization", "Smart suggestions"]
+    features: ["Adjustable weights for customized training", "Strong, durable construction", "Ideal for home gym and fitness training"]
   },
   {
     title: "Secure & Reliable Platform",
-    desc: "Enterprise-grade security with 99.9% uptime guarantee",
+    desc: "Stay organized, focused, and productive with this Daily Planner Journal, designed to help you plan your day with clarity and purpose. Whether for work, study, or personal goals, it provides structured sections for daily tasks, priorities, notes, and reflections. The simple, elegant layout encourages consistency, time management, and goal tracking, making it perfect for students, professionals, and anyone aiming to build better daily habits.",
     cta: "Get Started Free",
     link: "/signup",
     bg: "from-emerald-600 to-teal-600",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
+    image: "https://i.ibb.co.com/NdVpS2VG/ik-L-AC-UF1000-1000-QL80.jpg",
     icon: Shield,
-    features: ["SSL encryption", "Data backup", "Role-based access"]
+    features: ["Daily planning layout for tasks and priorities", "Helps improve productivity and time management", "Clean, easy-to-use design"]
   },
   {
     title: "Powerful Analytics Dashboard",
-    desc: "Track performance and gain insights with real-time analytics",
+    desc: "Nourish and hydrate your skin with this Moisturizing Face Cream, specially formulated to provide long-lasting moisture and a soft, healthy glow. Its lightweight, non-greasy texture absorbs quickly, helping to soothe dryness and improve skin texture. Suitable for daily use, this face cream keeps your skin feeling smooth, refreshed, and well-hydrated throughout the day.",
     cta: "View Analytics",
     link: "/analytics",
     bg: "from-orange-500 to-red-500",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
+    image: "https://i.ibb.co.com/v4Swz5Xd/Free-Shipping-Day-1to1.png",
     icon: CheckCircle,
-    features: ["Sales tracking", "Inventory insights", "Customer analytics"]
+    features: ["Deep hydration for soft, smooth skin", "Suitable for all skin types", "Ideal for daily skincare routine"]
   }
 ];
 
@@ -63,12 +63,12 @@ export default function BannerSlider() {
   const Icon = slide.icon;
 
   return (
-    <section className="relative h-[85vh] overflow-hidden">
+<section className="relative min-h-[85vh] md:h-[85vh] overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className={`absolute inset-0 bg-gradient-to-r ${slide.bg} opacity-90`} />
         <img
-          src={slide.image}
+         src={slide.image}
           alt="Banner"
           className="w-full h-full object-cover"
           loading="eager"
@@ -127,19 +127,22 @@ export default function BannerSlider() {
             </div>
 
             {/* Right Column - Visual Element */}
-            <div className="hidden lg:block relative">
+<div className="relative mt-12 lg:mt-0">
               {/* Floating Product Card */}
               <div className="relative animate-float">
                 <div className="absolute -inset-4 bg-gradient-to-r from-white/20 to-transparent rounded-3xl blur-xl" />
                 <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-2xl">
                   <div className="space-y-6">
                     {/* Product Image Placeholder */}
-                    <div className="aspect-video bg-white/10 rounded-xl flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-4xl mb-2">📱</div>
-                        <div className="text-white/80">Product Preview</div>
-                      </div>
-                    </div>
+                        <div className="aspect-video sm:aspect-[4/3] lg:aspect-video rounded-xl overflow-hidden">
+                        <img
+                        src={slide.image}
+                        alt="Preview"
+                        className="w-full h-full object-cover"
+                        />
+
+                        </div>
+
                     
                     {/* Product Info */}
                     <div className="space-y-4">
