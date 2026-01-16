@@ -1,3 +1,4 @@
+import HowItWorks from "../components/HowItWorks";
 import BannerSlider from "../components/BannerSlider";
 import LatestProducts from "../components/LatestProducts";
 import { getProducts } from "../lib/api";
@@ -11,6 +12,7 @@ const products = data.products;
     <div className="space-y-20">
       <BannerSlider />
       <LatestProducts products={products} />
+      <HowItWorks></HowItWorks>
     </div>
   );
 }

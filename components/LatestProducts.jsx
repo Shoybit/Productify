@@ -11,24 +11,31 @@ export default function LatestProducts({ products = [] }) {
     <section className="w-10/12 mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
       {/* Header with decorative element */}
       <div className="relative">
-        <div className="absolute -left-4 top-1/2 transform -translate-y-1/2">
-          <div className="w-1 h-12 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full" />
-        </div>
+
         
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pl-6">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <div className="p-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg">
-                <TrendingUp className="h-5 w-5 text-purple-600" />
-              </div>
-              <h2 className="text-sm font-semibold text-purple-600 uppercase tracking-wide">
-                Fresh Arrivals
-              </h2>
-            </div>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Latest Products
-            </h3>
-          </div>
+<div>
+  <div className="flex items-center gap-3 mb-4">
+    <div className="relative">
+      <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-20"></div>
+      <div className="relative p-2 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-100">
+        <TrendingUp className="h-5 w-5 text-gradient from-blue-600 to-purple-600" />
+      </div>
+    </div>
+    <div className="space-y-1">
+      <h2 className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent uppercase tracking-wider">
+        Fresh Arrivals
+      </h2>
+      <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+    </div>
+  </div>
+  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+    Latest Products
+    <span className="block text-lg font-normal text-gray-600 mt-3">
+      Discover our newest additions to the catalog
+    </span>
+  </h3>
+</div>
           
           <Link
             href="/products"
