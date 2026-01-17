@@ -50,7 +50,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 ">
       <div className="w-10/12 mx-auto px-4 sm:px-6 lg:px-8">
 
 
