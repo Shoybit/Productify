@@ -11,6 +11,8 @@ const slides = [
     desc: "Experience powerful sound and total freedom with these Wireless Bluetooth Headphones. Designed for comfort and performance, they deliver clear audio, deep bass, and stable connectivity for music, calls, gaming, and workouts. The lightweight, ergonomic design ensures all-day comfort, while long-lasting battery life keeps you connected without interruptions. With easy pairing and built-in controls, you can enjoy seamless listening anytime, anywhere.",
     cta: "View Products",
     link: "/products",
+    price: 2999,
+    rating: 4.5,
     bg: "from-blue-600 to-indigo-700",
     image: "https://i.ibb.co.com/PsW0MPwq/hoco-esd15-wireless-bluetooth-headphones-white.jpg", 
     icon: Eye,
@@ -21,26 +23,32 @@ const slides = [
     desc: "Build strength and improve fitness with this versatile Dumbbell Set, perfect for home workouts and gym training. Designed for durability and comfort, it helps you target multiple muscle groups including arms, shoulders, chest, back, and legs. The adjustable weight design allows you to customize your workout intensity, making it suitable for beginners and advanced users alike. Compact and easy to store, this dumbbell set is ideal for strength training, toning, and endurance workouts.",
     cta: "Add Product Now",
     link: "/add-product",
+    price: 2599,
+    rating: 4.6,
     bg: "from-purple-600 to-pink-600",
     image: "https://i.ibb.co.com/mVZvkQrZ/3761811-Adjustable20-Set20kg.avif",
     icon: Plus,
     features: ["Adjustable weights for customized training", "Strong, durable construction", "Ideal for home gym and fitness training"]
   },
   {
-    title: "Secure & Reliable Platform",
+    title: "Daily Planner Journal",
     desc: "Stay organized, focused, and productive with this Daily Planner Journal, designed to help you plan your day with clarity and purpose. Whether for work, study, or personal goals, it provides structured sections for daily tasks, priorities, notes, and reflections. The simple, elegant layout encourages consistency, time management, and goal tracking, making it perfect for students, professionals, and anyone aiming to build better daily habits.",
     cta: "Get Started Free",
     link: "/signup",
+    price: 399,
+    rating: 4.3,
     bg: "from-emerald-600 to-teal-600",
     image: "https://i.ibb.co.com/NdVpS2VG/ik-L-AC-UF1000-1000-QL80.jpg",
     icon: Shield,
     features: ["Daily planning layout for tasks and priorities", "Helps improve productivity and time management", "Clean, easy-to-use design"]
   },
   {
-    title: "Powerful Analytics Dashboard",
+    title: "Moisturizing Face Cream",
     desc: "Nourish and hydrate your skin with this Moisturizing Face Cream, specially formulated to provide long-lasting moisture and a soft, healthy glow. Its lightweight, non-greasy texture absorbs quickly, helping to soothe dryness and improve skin texture. Suitable for daily use, this face cream keeps your skin feeling smooth, refreshed, and well-hydrated throughout the day.",
     cta: "View Analytics",
     link: "/analytics",
+    price: 899,
+    rating: 4.2,
     bg: "from-orange-500 to-red-500",
     image: "https://i.ibb.co.com/v4Swz5Xd/Free-Shipping-Day-1to1.png",
     icon: CheckCircle,
@@ -147,7 +155,7 @@ export default function BannerSlider() {
                     {/* Product Info */}
                     <div className="space-y-4">
                       <div className="flex justify-between items-center">
-                        <h3 className="text-xl font-semibold text-white">Sample Product</h3>
+                        <h3 className="text-xl font-semibold text-white">{slide.title}</h3>
                         <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">
                           In Stock
                         </div>
@@ -156,9 +164,9 @@ export default function BannerSlider() {
                         <div className="text-yellow-400 flex">
                           {"★".repeat(5)}
                         </div>
-                        <span className="text-white/80">(4.5/5)</span>
+                        <span className="text-white/80">{slide.rating}</span>
                       </div>
-                      <div className="text-2xl font-bold text-white">$299.99</div>
+                      <div className="text-2xl font-bold text-white">${slide.price}</div>
                     </div>
                   </div>
                 </div>
