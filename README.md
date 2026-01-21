@@ -100,12 +100,12 @@ Open 👉 **http://localhost:3000**
 
 ## 📸 Screenshots
 
-> Add screenshots here later  
-> Example:
-```
-/screenshots/home.png
-/screenshots/products.png
-```
+### 🏠 Home Page
+![Home Page](https://raw.githubusercontent.com/Shoybit/Productify/main/public/Home.png)
+
+### 🛍️ Products Page
+![Products Page](https://raw.githubusercontent.com/Shoybit/Productify/main/public/Products.png)
+
 
 ---
 
