@@ -53,11 +53,11 @@ export default function LatestProducts({ products = [] }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
         {products.map((product) => (
           <div
-            key={product.id}
+            key={product._id}
             className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
           >
             {/* Product Image Container */}
-            <Link href={`/products/${product.id}`} className="block">
+            <Link href={`/products/${product._id}`} className="block">
               <div className="relative h-56 md:h-64 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
                 {product.image &&
                 (product.image.startsWith("http") ||

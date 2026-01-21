@@ -48,7 +48,7 @@ export default function ProductsPage() {
       <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-8 px-4">
         <div className="w-10/12 mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Discover Amazing Products</h1>
-          <p className="text-indigo-100">Find exactly what you're looking for from our curated collection</p>
+          <p className="text-indigo-100">Find exactly what you`re looking for from our curated collection</p>
         </div>
       </div>
 
@@ -188,7 +188,7 @@ export default function ProductsPage() {
               <>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {products.map((product) => (
-                    <ProductCard key={product.id} product={product} />
+                    <ProductCard key={product._id} product={product} />
                   ))}
                 </div>
 

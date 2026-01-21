@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
@@ -55,8 +54,7 @@ export default function AddProductForm() {
     if (!form.price || Number(form.price) <= 0)
       err.price = "Valid price is required";
     if (!form.image.trim()) err.image = "Image URL is required";
-    if (!form.description.trim())
-      err.description = "Description is required";
+    if (!form.description.trim()) err.description = "Description is required";
 
     setErrors(err);
     return Object.keys(err).length === 0;
@@ -87,19 +85,17 @@ export default function AddProductForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-10">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <div className="w-10/12 mx-auto max-w-4xl">
         {/* HEADER */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 pt-5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 mb-4 mt-4">
             <Plus size={28} className="text-white" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 bg-lime-800 mb-2">
             Add New Product
           </h1>
-          <p className="text-gray-600">
-            Fill in the product details below
-          </p>
+          <p className="text-gray-600 mb-2">Fill in the product details below</p>
         </div>
 
         {/* FORM CARD */}
@@ -111,7 +107,6 @@ export default function AddProductForm() {
                 Product Title *
               </label>
               <div className="relative">
-              
                 <input
                   name="title"
                   value={form.title}
@@ -160,7 +155,6 @@ export default function AddProductForm() {
                   Price ($) *
                 </label>
                 <div className="relative">
-                
                   <input
                     type="number"
                     name="price"
@@ -187,7 +181,6 @@ export default function AddProductForm() {
                   Stock Quantity
                 </label>
                 <div className="relative">
-              
                   <input
                     type="number"
                     name="stock"
@@ -214,7 +207,9 @@ export default function AddProductForm() {
                   className="h-12 w-full px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white"
                 >
                   {categories.map((c) => (
-                    <option key={c} value={c}>{c}</option>
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -230,7 +225,9 @@ export default function AddProductForm() {
                   className="h-12 w-full px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white"
                 >
                   {brands.map((b) => (
-                    <option key={b} value={b}>{b}</option>
+                    <option key={b} value={b}>
+                      {b}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -250,7 +247,9 @@ export default function AddProductForm() {
                     className="h-12 w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all bg-white"
                   >
                     {[5, 4.5, 4, 3.5, 3].map((r) => (
-                      <option key={r} value={r}>{r} Stars</option>
+                      <option key={r} value={r}>
+                        {r} Stars
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -295,9 +294,9 @@ export default function AddProductForm() {
                 disabled={loading}
                 className="flex-1 flex items-center justify-center gap-2
                             font-semibold py-4 rounded-lg
-                           hover:from-blue-700 hover:to-indigo-700
-                           disabled:opacity-50 disabled:cursor-not-allowed 
-                           transition-all duration-300 shadow-md hover:shadow-lg"
+                           bg-gradient-to-r from-indigo-600
+                           to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 
+                           transition-all text-sm shadow-md hover:shadow-lg"
               >
                 {loading ? (
                   <>

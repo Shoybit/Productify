@@ -109,7 +109,7 @@ export default function ProductCard({ product }) {
         {/* Action Buttons */}
         <div className="flex gap-2">
           <Link
-            href={`/products/${product.id}`}
+            href={`/products/${product._id}`}
             className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all text-sm shadow-md hover:shadow-lg"
           >
             <Eye size={16} />
