@@ -19,11 +19,11 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { icon: <Facebook size={20} />, href: "https://facebook.com", label: "Facebook" },
-    { icon: <Twitter size={20} />, href: "https://twitter.com", label: "Twitter" },
-    { icon: <Instagram size={20} />, href: "https://instagram.com", label: "Instagram" },
-    { icon: <Github size={20} />, href: "https://github.com", label: "GitHub" },
-    { icon: <Linkedin size={20} />, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: <Facebook size={20} />, href: "https://www.facebook.com/shoyaibchowdhury0", label: "Facebook" },
+    { icon: <Twitter size={20} />, href: "https://twitter.com/shoyaib", label: "Twitter" },
+    { icon: <Instagram size={20} />, href: "https://instagram.com/shoyaibchowdhury0", label: "Instagram" },
+    { icon: <Github size={20} />, href: "https://github.com/shoybit", label: "GitHub" },
+    { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/shoyaib-islam1/", label: "LinkedIn" },
   ];
 
   const contactInfo = [
